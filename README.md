@@ -1,4 +1,4 @@
-# EAV_NET_CORE
+# EAV_.NET_CORE
 Representing entities, attributes and values
 for Dynamic attributes
 
