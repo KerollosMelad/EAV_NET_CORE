@@ -16,11 +16,29 @@ namespace EAV.Controllers
         }
 
         // POST: api/[controller]
-        [HttpPost("Add")]
-        public async Task<IActionResult> Post()
+        [HttpPost("AddProduct")]
+        public async Task<IActionResult> AddProduct()
+        {
+            await _repository.AddMockProduct();
+            return NoContent();
+        }
+
+        [HttpPost("AddProducts")]
+        public async Task<IActionResult> AddProducts()
         {
             await _repository.AddMockProducts();
             return NoContent();
+        }
+
+        [HttpGet("{id}/withProp")]
+        public async Task<IActionResult> GetProduct(int id)
+        {
+            var entity = await _repository.GetProduct(id);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return Ok(entity);
         }
     }
 }
