@@ -12,3 +12,7 @@ However, in such implementation we lose metadata information and all the values 
 the EAV model is in Magento https://magento.com/, the e-commerce platform.
 
 
+
+ref: https://inviqa.com/blog/understanding-eav-data-model-and-when-use-it.
+
+
